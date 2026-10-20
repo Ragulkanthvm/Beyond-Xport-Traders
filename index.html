@@ -1,0 +1,3495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Xport Traders | Connecting Indian Suppliers with Global Markets</title>
+<meta name="description" content="Founded by Gunal, Beyond Xport Traders connects trusted Indian suppliers with international buyers, simplifying cross-border trade between India, Sri Lanka, and global markets.">
+<link rel="icon" href="images/logo-globe.png" type="image/png">
+
+<!-- Google Fonts: Editorial Serif + Precision Modern Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   DESIGN TOKENS & ARCHITECTURE (Handcrafted Executive Trade Aesthetic)
+   ========================================================================== */
+:root {
+  --navy-950: #040d1a;
+  --navy-900: #07152b;
+  --navy-850: #0b1f3c;
+  --navy-800: #102a4f;
+  --navy-700: #193d70;
+  --navy-600: #235394;
+  
+  --gold-500: #d49524;
+  --gold-400: #e8a838;
+  --gold-300: #f6c05d;
+  --gold-100: #fef7e7;
+  
+  --sky-500: #2b7bc4;
+  --sky-400: #4a9be4;
+  --sky-100: #eaf4fd;
+  
+  --slate-900: #0f172a;
+  --slate-700: #334155;
+  --slate-600: #475569;
+  --slate-500: #64748b;
+  --slate-400: #94a3b8;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+  --slate-50:  #f8fafc;
+  
+  --emerald-500: #10b981;
+  --emerald-100: #d1fae5;
+  
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 2px 8px rgba(7, 21, 43, 0.05);
+  --shadow-md: 0 12px 28px -6px rgba(7, 21, 43, 0.08), 0 4px 12px -2px rgba(7, 21, 43, 0.04);
+  --shadow-lg: 0 24px 48px -12px rgba(7, 21, 43, 0.16), 0 8px 16px -4px rgba(7, 21, 43, 0.06);
+  --shadow-glow: 0 0 40px rgba(232, 168, 56, 0.22);
+}
+
+/* Base Reset & Global Rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--slate-700);
+  background-color: #ffffff;
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-400);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-padding {
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--navy-900);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+  background: var(--gold-100);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+  border: 1px solid rgba(212, 149, 36, 0.25);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  color: var(--navy-900);
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.section-title.light {
+  color: #ffffff;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--slate-500);
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+
+.section-subtitle.light {
+  color: #cbd5e1;
+}
+
+/* ==========================================================================
+   BUTTONS & BADGES
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+  color: var(--navy-950);
+  box-shadow: 0 4px 18px rgba(212, 149, 36, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(212, 149, 36, 0.45);
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-400));
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: var(--navy-900);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-navy {
+  background: var(--navy-900);
+  color: #ffffff;
+}
+
+.btn-navy:hover {
+  background: var(--navy-800);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline-gold {
+  border-color: var(--gold-400);
+  color: var(--gold-500);
+  background: transparent;
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold-100);
+  color: var(--navy-950);
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   LIVE MARITIME & GLOBAL TRADE TICKER
+   ========================================================================== */
+.ticker-bar {
+  background: var(--navy-950);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 7px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 101;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: ticker-slide 34s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.ticker-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emerald-500);
+  box-shadow: 0 0 8px var(--emerald-500);
+  display: inline-block;
+  animation: pulse-dot 2s infinite;
+}
+
+.ticker-gold {
+  color: var(--gold-300);
+  font-weight: 600;
+}
+
+@keyframes ticker-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ==========================================================================
+   TOP CONTACT STRIP & NAVIGATION HEADER
+   ========================================================================== */
+.top-contact-strip {
+  background: var(--navy-950);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: #94a3b8;
+  padding: 7px 0;
+  position: relative;
+  z-index: 102;
+}
+
+.top-contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.top-contact-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.top-contact-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e1;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.top-link:hover {
+  color: var(--gold-300);
+}
+
+.top-link-divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.top-wa-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(37, 211, 102, 0.16);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  color: #86efac;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.top-wa-pill:hover {
+  background: rgba(37, 211, 102, 0.28);
+  color: #ffffff;
+}
+
+header.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  transition: all 0.3s ease;
+}
+
+header.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 24px rgba(7, 21, 43, 0.08);
+  border-bottom-color: transparent;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 28px;
+  gap: 16px;
+  transition: height 0.3s ease;
+}
+
+header.site-header.scrolled .nav-container {
+  height: 64px;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(212, 149, 36, 0.3);
+  border: 2px solid var(--gold-400);
+  background: #ffffff;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.brand-wrapper:hover .brand-logo-img {
+  transform: rotate(15deg) scale(1.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--navy-900);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.brand-subtitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+}
+
+nav.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 8px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--slate-700);
+  padding: 7px 11px;
+  border-radius: var(--radius-full);
+  position: relative;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: var(--navy-900);
+  background: var(--slate-100);
+}
+
+.nav-link.active {
+  color: var(--navy-900);
+  background: rgba(232, 168, 56, 0.16);
+  font-weight: 700;
+}
+
+.nav-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  background: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  color: var(--navy-900);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nav-contact-pill:hover {
+  background: var(--gold-100);
+  border-color: var(--gold-400);
+  color: var(--navy-950);
+}
+
+.nav-cta-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  border-radius: var(--radius-sm);
+}
+
+.mobile-toggle span {
+  display: block;
+  position: absolute;
+  height: 2.5px;
+  width: 24px;
+  background: var(--navy-900);
+  border-radius: 2px;
+  left: 10px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-toggle span:nth-child(1) { top: 14px; }
+.mobile-toggle span:nth-child(2) { top: 21px; }
+.mobile-toggle span:nth-child(3) { top: 28px; }
+
+.mobile-toggle.active span:nth-child(1) {
+  top: 21px;
+  transform: rotate(45deg);
+}
+.mobile-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+.mobile-toggle.active span:nth-child(3) {
+  top: 21px;
+  transform: rotate(-45deg);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background: radial-gradient(circle at 85% 15%, #18427e 0%, var(--navy-950) 65%);
+  color: #ffffff;
+  padding: 100px 0 110px;
+  overflow: hidden;
+}
+
+.hero-mesh {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(rgba(232, 168, 56, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero-glow-1 {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 168, 56, 0.18) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(43, 123, 196, 0.22) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(232, 168, 56, 0.4);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-300);
+  margin-bottom: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 5.2vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--gold-300);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-lead {
+  font-size: 1.18rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 580px;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.hero-metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-number {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--gold-300);
+  line-height: 1.1;
+}
+
+.metric-label {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* Hero Visual Composition */
+.hero-visual-card {
+  position: relative;
+}
+
+.hero-img-frame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.hero-img-frame:hover {
+  transform: scale(1.02);
+}
+
+.hero-img-frame img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-floating-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  background: rgba(7, 21, 43, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(232, 168, 56, 0.3);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+}
+
+.hero-floating-badge-info h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.hero-floating-badge-info p {
+  font-size: 0.78rem;
+  color: var(--gold-300);
+}
+
+.status-live-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: var(--radius-full);
+  color: #6ee7b7;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   MARITIME ROUTE VISUALIZER (Interactive Corridor)
+   ========================================================================== */
+.route-section {
+  background: linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 100%);
+  padding: 48px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.route-header-wrap {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.route-header-wrap h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.route-header-wrap p {
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.route-svg-box {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.route-svg-box svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.route-info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.route-pill-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.3s ease;
+}
+
+.route-pill-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--gold-400);
+  transform: translateY(-2px);
+}
+
+.route-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(212, 149, 36, 0.15);
+  display: grid;
+  place-items: center;
+  color: var(--gold-400);
+  flex-shrink: 0;
+}
+
+.route-pill-card h5 {
+  font-size: 0.88rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.route-pill-card span {
+  font-size: 0.76rem;
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   ABOUT US & FOUNDER SHOWCASE SECTION (HANDCRAFTED EDITORIAL)
+   ========================================================================== */
+.about-section {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-header {
+  margin-bottom: 32px;
+}
+
+/* The Philosophical Genesis Box */
+.genesis-manifesto {
+  background: linear-gradient(135deg, var(--slate-50) 0%, #fdfcf7 100%);
+  border-left: 5px solid var(--gold-400);
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  padding: 36px 42px;
+  margin-bottom: 40px;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  border-top: 1px solid var(--slate-200);
+  border-right: 1px solid var(--slate-200);
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.genesis-quote-mark {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--gold-400);
+  opacity: 0.35;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+}
+
+.genesis-manifesto blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--navy-900);
+  position: relative;
+  z-index: 1;
+  padding-left: 12px;
+}
+
+/* Main About Us Narrative Card */
+.about-narrative-card {
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-xl);
+  padding: 42px 46px;
+  margin-bottom: 48px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-narrative-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold-400), var(--sky-500));
+}
+
+.narrative-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--navy-700);
+  margin-bottom: 14px;
+}
+
+.about-subheading {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--navy-900);
+  margin-bottom: 18px;
+}
+
+.about-highlight-text {
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: var(--navy-900);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.about-highlight-text strong {
+  color: var(--navy-950);
+  font-weight: 700;
+}
+
+.about-supporting-text {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--slate-600);
+  margin-bottom: 24px;
+}
+
+.about-values-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.value-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--slate-100);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  transition: all 0.25s ease;
+}
+
+.value-pill:hover {
+  background: var(--gold-100);
+  border-color: var(--gold-400);
+  color: var(--navy-950);
+}
+
+/* Dedicated Founder Content: From the Founder's Desk */
+.founder-spotlight-wrap {
+  margin-top: 24px;
+  padding: 52px 48px;
+  background: linear-gradient(145deg, var(--navy-950) 0%, var(--navy-900) 100%);
+  border-radius: var(--radius-xl);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.founder-spotlight-wrap::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 168, 56, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.founder-section-intro {
+  margin-bottom: 40px;
+}
+
+.founder-spotlight-title {
+  color: #ffffff;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.founder-spotlight-subtitle {
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+.founder-grid-layout {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 40px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+.founder-profile-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.founder-card-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.founder-avatar-wrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.founder-avatar-initial {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--navy-950);
+  box-shadow: 0 4px 18px rgba(212, 149, 36, 0.4);
+  border: 2px solid #ffffff;
+}
+
+.verified-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--emerald-500);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  border: 2px solid var(--navy-900);
+}
+
+.founder-identity h4 {
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.founder-designation {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-300);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.founder-location {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 3px;
+}
+
+.founder-bio p {
+  color: #cbd5e1;
+  font-size: 0.96rem;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.founder-pledge-box {
+  background: rgba(232, 168, 56, 0.09);
+  border-left: 3px solid var(--gold-400);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 18px 20px;
+  margin-bottom: 26px;
+}
+
+.pledge-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-300);
+  margin-bottom: 6px;
+}
+
+.founder-pledge-box p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+.founder-contact-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Founder 4 Pillars Grid */
+.founder-pillars-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.founder-pillar-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.founder-pillar-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--gold-400);
+  transform: translateX(4px);
+}
+
+.pillar-num {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--gold-400);
+  line-height: 1;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.pillar-content h4 {
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.pillar-content p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 992px) {
+  .founder-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .founder-spotlight-wrap {
+    padding: 34px 22px;
+  }
+  .about-narrative-card {
+    padding: 30px 22px;
+  }
+}
+
+/* ==========================================================================
+   SOURCING SECTORS / PRODUCT SHOWCASE
+   ========================================================================== */
+.sectors-section {
+  background: var(--slate-50);
+  border-top: 1px solid var(--slate-200);
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.sectors-tabs-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.sector-tab-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  color: var(--slate-700);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sector-tab-btn:hover, .sector-tab-btn.active {
+  background: var(--navy-900);
+  color: #ffffff;
+  border-color: var(--navy-900);
+}
+
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 24px;
+}
+
+.sector-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--slate-200);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sector-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-400), var(--sky-400));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.sector-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.sector-card:hover::after {
+  transform: scaleX(1);
+}
+
+.sector-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  background: var(--sky-100);
+  color: var(--navy-700);
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.sector-card:hover .sector-icon {
+  background: var(--gold-400);
+  color: var(--navy-950);
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.sector-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.sector-card p {
+  color: var(--slate-600);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.sector-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.sector-tag-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: var(--slate-100);
+  border-radius: var(--radius-full);
+  color: var(--slate-700);
+}
+
+.sector-card-action {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy-700);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.sector-card-action:hover {
+  color: var(--gold-500);
+  gap: 10px;
+}
+
+/* ==========================================================================
+   SERVICES SECTION
+   ========================================================================== */
+.services-section {
+  background: #ffffff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.service-box {
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.service-box:hover {
+  border-color: var(--gold-400);
+  box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08);
+  transform: translateY(-6px);
+}
+
+.service-num {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--gold-500);
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.service-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.service-box p {
+  color: var(--slate-600);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   PROCESS / HOW WE WORK
+   ========================================================================== */
+.process-section {
+  background: radial-gradient(circle at 15% 15%, #0f2c56 0%, var(--navy-950) 80%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.steps-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  position: relative;
+  margin-top: 48px;
+}
+
+.steps-timeline::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 60px;
+  right: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-400), var(--sky-400));
+  z-index: 1;
+}
+
+.step-card {
+  position: relative;
+  z-index: 2;
+  padding-top: 10px;
+}
+
+.step-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy-900);
+  border: 3px solid var(--gold-400);
+  color: var(--gold-300);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  box-shadow: 0 0 0 8px rgba(232, 168, 56, 0.15);
+  transition: all 0.3s ease;
+}
+
+.step-card:hover .step-badge {
+  background: var(--gold-400);
+  color: var(--navy-950);
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(232, 168, 56, 0.4);
+}
+
+.step-card h3 {
+  color: #ffffff;
+  font-size: 1.18rem;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   BUSINESS MODEL & WHY CHOOSE US
+   ========================================================================== */
+.model-section {
+  background: var(--slate-50);
+}
+
+.model-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.model-card-box {
+  background: #ffffff;
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-xl);
+  padding: 44px 38px;
+  box-shadow: var(--shadow-sm);
+}
+
+.model-card-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.tick-list {
+  list-style: none;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tick-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.96rem;
+  color: var(--slate-700);
+}
+
+.tick-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--emerald-100);
+  color: var(--emerald-500);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.model-notice {
+  margin-top: 28px;
+  padding: 16px 20px;
+  background: var(--gold-100);
+  border-left: 4px solid var(--gold-400);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.88rem;
+  color: var(--navy-950);
+}
+
+/* ==========================================================================
+   FAQ ACCORDION
+   ========================================================================== */
+.faq-section {
+  background: #ffffff;
+}
+
+.faq-wrapper {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.faq-trigger {
+  width: 100%;
+  padding: 22px 0;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.faq-trigger:hover {
+  color: var(--gold-500);
+}
+
+.faq-chevron {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--slate-100);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+  background: var(--gold-400);
+  color: var(--navy-950);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  color: var(--slate-600);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-content-inner {
+  padding-bottom: 22px;
+}
+
+/* ==========================================================================
+   CONTACT & INTERACTIVE INQUIRY SUITE
+   ========================================================================== */
+.contact-section {
+  background: linear-gradient(180deg, var(--navy-950) 0%, #061120 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('images/port.jpg') center/cover no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glassmorphic Form Card */
+.inquiry-form-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-xl);
+  padding: 44px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.inquiry-form-card h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.inquiry-form-card p.form-desc {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+
+.form-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--gold-400);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.2);
+}
+
+.form-control option {
+  background: var(--navy-900);
+  color: #ffffff;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-submit-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Contact Info & Verified Credentials Card */
+.contact-details-box {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-info-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.contact-info-card h4 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-rows {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-row-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.info-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(232, 168, 56, 0.15);
+  color: var(--gold-400);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.info-content small {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-300);
+  margin-bottom: 2px;
+}
+
+.info-content span, .info-content a {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.info-content a:hover {
+  color: var(--gold-300);
+  text-decoration: underline;
+}
+
+.credentials-badge-card {
+  background: linear-gradient(135deg, rgba(232, 168, 56, 0.12), rgba(43, 123, 196, 0.12));
+  border: 1px solid rgba(232, 168, 56, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+}
+
+.credentials-badge-card h5 {
+  color: var(--gold-300);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.credentials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.credential-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #e2e8f0;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer.site-footer {
+  background: #02070f;
+  color: #94a3b8;
+  padding: 60px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.9rem;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  gap: 48px;
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand-p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 380px;
+  margin-top: 16px;
+}
+
+.footer-col h5 {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold-400);
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+/* ==========================================================================
+   FLOATING SPEED DIAL / WHATSAPP & BACK TO TOP
+   ========================================================================== */
+.floating-actions {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.btn-whatsapp-float {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: var(--radius-full);
+  background: #25d366;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
+  background: #20ba59;
+}
+
+.btn-scroll-top {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--navy-900);
+  border: 1px solid var(--gold-400);
+  color: var(--gold-400);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.btn-scroll-top:hover {
+  background: var(--gold-400);
+  color: var(--navy-950);
+}
+
+/* ==========================================================================
+   INTERACTIVE TOAST NOTIFICATION
+   ========================================================================== */
+.toast-notice {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--navy-950);
+  border: 1px solid var(--gold-400);
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.toast-notice.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Mobile Drawer & Backdrop Component */
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 13, 26, 0.72);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(86vw, 340px);
+  background: var(--navy-950);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.drawer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.drawer-brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-400);
+}
+
+.drawer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-brand-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.drawer-brand-sub {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mobile-close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.mobile-close-btn:hover, .mobile-close-btn:active {
+  background: var(--gold-400);
+  border-color: var(--gold-400);
+  color: var(--navy-950);
+  transform: scale(1.08) rotate(90deg);
+}
+
+.drawer-nav-list {
+  list-style: none;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.drawer-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  color: #cbd5e1;
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.drawer-nav-link:hover, .drawer-nav-link.active {
+  background: rgba(232, 168, 56, 0.15);
+  color: var(--gold-300);
+  padding-left: 20px;
+}
+
+.drawer-nav-link::after {
+  content: "→";
+  font-size: 0.95rem;
+  opacity: 0.4;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.drawer-nav-link:hover::after, .drawer-nav-link.active::after {
+  opacity: 1;
+  transform: translateX(4px);
+  color: var(--gold-400);
+}
+
+.drawer-footer-box {
+  padding: 20px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.drawer-contact-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.drawer-contact-action:hover {
+  color: var(--gold-300);
+}
+
+.drawer-contact-action svg {
+  color: var(--gold-400);
+  flex-shrink: 0;
+}
+
+@media (min-width: 1141px) {
+  .mobile-backdrop, .mobile-drawer {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1140px) {
+  .top-contact-left {
+    display: none;
+  }
+  
+  .top-contact-container {
+    justify-content: center;
+  }
+
+  .nav-contact-pill {
+    display: none;
+  }
+
+  nav.main-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--slate-100);
+    border: 1px solid var(--slate-200);
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    position: relative;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-toggle:hover {
+    background: var(--gold-100);
+    border-color: var(--gold-400);
+  }
+
+  .mobile-toggle span {
+    display: block;
+    position: absolute;
+    height: 2.5px;
+    width: 22px;
+    background: var(--navy-900);
+    border-radius: 2px;
+    left: 10px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-toggle span:nth-child(1) { top: 13px; }
+  .mobile-toggle span:nth-child(2) { top: 20px; }
+  .mobile-toggle span:nth-child(3) { top: 27px; }
+
+  .mobile-toggle.active span:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+    background: var(--gold-500);
+  }
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  .mobile-toggle.active span:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+    background: var(--gold-500);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-grid, .about-editorial-grid, .contact-layout-grid, .model-comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .steps-timeline {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 36px;
+  }
+  
+  .steps-timeline::before {
+    display: none;
+  }
+  
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-metrics-bar {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .steps-timeline {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-grid-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .inquiry-form-card {
+    padding: 26px 20px;
+  }
+  
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .genesis-manifesto {
+    padding: 24px 20px;
+  }
+  
+  .genesis-manifesto blockquote {
+    font-size: 1.15rem;
+  }
+  
+  .btn-whatsapp-float span {
+    display: none;
+  }
+  
+  .btn-whatsapp-float {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP UTILITY / CONTACT STRIP -->
+<div class="top-contact-strip" aria-label="Official Contact Information">
+  <div class="top-contact-container">
+    <div class="top-contact-left">
+      <span class="ticker-dot"></span>
+      <span>Direct Cross-Border Trade &bull; Connecting Indian Suppliers with Global Markets</span>
+    </div>
+    <div class="top-contact-right">
+      <a href="tel:+917418704319" class="top-link" title="Call Trade Desk">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <strong>+91 74187 04319</strong>
+      </a>
+      <span class="top-link-divider">|</span>
+      <a href="mailto:beyonxport@gmail.com" class="top-link" title="Email Inquiries">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>beyonxport@gmail.com</span>
+      </a>
+      <span class="top-link-divider">|</span>
+      <a href="https://wa.me/917418704319" target="_blank" rel="noopener noreferrer" class="top-wa-pill">
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 1. LIVE MARITIME & GLOBAL TRADE TICKER -->
+<div class="ticker-bar" aria-label="Live Trade Marquee">
+  <div class="ticker-track">
+    <div class="ticker-item"><span class="ticker-dot"></span> <strong>ACTIVE CORRIDOR:</strong> Tuticorin / Chennai ⇄ Colombo Port (24–48h Transit)</div>
+    <div class="ticker-item"><span class="ticker-gold">✦</span> DIRECT TRADE DESK: <strong>+91 74187 04319</strong> &bull; <strong>beyonxport@gmail.com</strong></div>
+    <div class="ticker-item"><span class="ticker-gold">✦</span> <strong>FOUNDED BY GUNAL:</strong> Connecting Indian Suppliers with International Buyers</div>
+    <div class="ticker-item"><span class="ticker-gold">✦</span> ZERO-INVENTORY BROKERAGE MODEL: 100% Transparent Factory-Direct Pricing</div>
+    <div class="ticker-item"><span class="ticker-dot"></span> <strong>ACTIVE CORRIDOR:</strong> Tuticorin / Chennai ⇄ Colombo Port (24–48h Transit)</div>
+    <div class="ticker-item"><span class="ticker-gold">✦</span> DIRECT TRADE DESK: <strong>+91 74187 04319</strong> &bull; <strong>beyonxport@gmail.com</strong></div>
+    <div class="ticker-item"><span class="ticker-gold">✦</span> <strong>FOUNDED BY GUNAL:</strong> Connecting Indian Suppliers with International Buyers</div>
+    <div class="ticker-item"><span class="ticker-gold">✦</span> ZERO-INVENTORY BROKERAGE MODEL: 100% Transparent Factory-Direct Pricing</div>
+  </div>
+</div>
+
+<!-- 2. SITE HEADER & NAVIGATION -->
+<header class="site-header" id="siteHeader">
+  <div class="nav-container">
+    <a href="#home" class="brand-wrapper" aria-label="Beyond Xport Traders Home">
+      <img src="images/logo-globe.png" alt="Beyond Xport Traders Logo" class="brand-logo-img">
+      <div class="brand-text">
+        <span class="brand-title">BEYOND XPORT</span>
+        <span class="brand-subtitle">TRADERS</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="main-nav" aria-label="Main Navigation">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#sectors" class="nav-link">Sourcing</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#process" class="nav-link">How It Works</a></li>
+        <li><a href="#model" class="nav-link">Business Model</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta-wrap">
+      <a href="tel:+917418704319" class="nav-contact-pill" title="Call Beyond Xport Traders">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+91 74187 04319</span>
+      </a>
+      <a href="#contact" class="btn btn-primary btn-sm">Submit RFQ</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer Dimmed Backdrop -->
+<div class="mobile-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+
+<!-- Dedicated Mobile Navigation Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+  <div class="mobile-drawer-header">
+    <div class="drawer-brand">
+      <img src="images/logo-globe.png" alt="Beyond Xport Logo">
+      <div class="drawer-brand-text">
+        <span class="drawer-brand-name">BEYOND XPORT</span>
+        <span class="drawer-brand-sub">TRADERS</span>
+      </div>
+    </div>
+    <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+
+  <ul class="drawer-nav-list" id="drawerNavList">
+    <li><a href="#home" class="drawer-nav-link active">Home</a></li>
+    <li><a href="#about" class="drawer-nav-link">About Us &amp; Founder</a></li>
+    <li><a href="#sectors" class="drawer-nav-link">Sourcing Sectors</a></li>
+    <li><a href="#services" class="drawer-nav-link">Our Services</a></li>
+    <li><a href="#process" class="drawer-nav-link">How It Works</a></li>
+    <li><a href="#model" class="drawer-nav-link">Business Model</a></li>
+    <li><a href="#faq" class="drawer-nav-link">Frequently Asked Questions</a></li>
+    <li><a href="#contact" class="drawer-nav-link">Contact Us</a></li>
+  </ul>
+
+  <div class="drawer-footer-box">
+    <a href="tel:+917418704319" class="drawer-contact-action">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+91 74187 04319</span>
+    </a>
+    <a href="https://wa.me/917418704319" target="_blank" rel="noopener noreferrer" class="drawer-contact-action" style="color: #6ee7b7;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.35.06-.53.27-.18.21-.7.68-.7 1.66s.72 1.93.82 2.06c.1.14 1.39 2.19 3.42 3.03.48.2.86.33 1.15.42.49.15.93.13 1.28.08.39-.06 1.21-.5 1.38-.98.17-.48.17-.89.12-.98-.05-.09-.19-.15-.4-.26-.21-.1-1.21-.6-1.4-.66-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.05-.21-.1-.89-.33-1.69-1.05-.63-.56-1.05-1.26-1.17-1.47-.12-.21-.01-.33.09-.43.09-.09.21-.24.31-.36.1-.12.14-.21.21-.35.07-.14.03-.26-.02-.36-.05-.1-.47-1.13-.64-1.55-.17-.41-.34-.35-.47-.36h-.4z"/></svg>
+      <span>WhatsApp Quick Chat</span>
+    </a>
+    <a href="mailto:beyonxport@gmail.com" class="drawer-contact-action">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span>beyonxport@gmail.com</span>
+    </a>
+    <a href="#contact" class="btn btn-primary btn-sm" style="width: 100%; margin-top: 6px;">Submit Trade RFQ &rarr;</a>
+  </div>
+</div>
+
+<main>
+  <!-- 3. HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="hero-mesh"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content-col">
+        <div class="hero-badge-pill reveal-item">
+          <span class="ticker-dot"></span> Cross-Border Trade &amp; Sourcing Agency
+        </div>
+
+        <h1 class="hero-title reveal-item reveal-delay-1">
+          Bridging Indian Abundance with <em>Global Markets</em>.
+        </h1>
+
+        <p class="hero-lead reveal-item reveal-delay-2">
+          Beyond Xport Traders bridges trusted Indian manufacturers with international buyers. From regional corridors in Sri Lanka to emerging global destinations, we streamline cross-border trade through verified sourcing, clear communication, and dependable execution.
+        </p>
+
+        <div class="hero-actions reveal-item reveal-delay-3">
+          <a href="#contact" class="btn btn-primary">
+            Request Sourcing Quote
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#about" class="btn btn-secondary">
+            Meet the Founder
+          </a>
+        </div>
+
+        <div class="hero-metrics-bar reveal-item reveal-delay-4">
+          <div class="metric-item">
+            <span class="metric-number">100%</span>
+            <span class="metric-label">Verified Supplier Network</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">24–48h</span>
+            <span class="metric-label">Direct Sea Transit (SL)</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">0%</span>
+            <span class="metric-label">Inventory Markup Overhead</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual-col reveal-item reveal-delay-2">
+        <div class="hero-visual-card">
+          <div class="hero-img-frame">
+            <img src="images/banner.jpg" alt="Beyond Xport Traders maritime container cargo logistics and port crane at sunset" width="1000" height="1000">
+          </div>
+          <div class="hero-floating-badge">
+            <div class="hero-floating-badge-info">
+              <h4>Direct Maritime Corridors</h4>
+              <p>Tuticorin &amp; Chennai ➔ Colombo Port Hub</p>
+            </div>
+            <span class="status-live-chip">
+              <span class="ticker-dot"></span> Active Trade
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTERACTIVE MARITIME TRADE CORRIDOR -->
+  <section class="route-section" aria-label="Maritime Trade Route Visualizer">
+    <div class="container">
+      <div class="route-header-wrap reveal-item">
+        <span class="section-label">Strategic Trade Corridors</span>
+        <h3>Direct Gateway: Connecting India to Sri Lanka &amp; Beyond</h3>
+        <p>Short sea transit routes operating from primary Indian deepwater ports directly into the Port of Colombo.</p>
+      </div>
+
+      <div class="route-svg-box reveal-item reveal-delay-1">
+        <svg viewBox="0 0 1000 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shipping Arc Path -->
+          <path id="tradeLane" d="M120 90 C320 -15 680 -15 880 85" stroke="#e8a838" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8" />
+          
+          <!-- Origin Node: India -->
+          <circle cx="120" cy="90" r="10" fill="#0b1f3c" stroke="#e8a838" stroke-width="3"/>
+          <circle cx="120" cy="90" r="18" fill="none" stroke="#e8a838" stroke-width="1.5" opacity="0.4">
+            <animate attributeName="r" values="10;26;10" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+          </circle>
+          
+          <!-- Destination Node: Colombo Port -->
+          <circle cx="880" cy="85" r="10" fill="#0b1f3c" stroke="#4a9be4" stroke-width="3"/>
+          <circle cx="880" cy="85" r="18" fill="none" stroke="#4a9be4" stroke-width="1.5" opacity="0.4">
+            <animate attributeName="r" values="10;26;10" dur="3s" begin="1s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" begin="1s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Animated Moving Vessel Symbol along Path -->
+          <g>
+            <circle r="7" fill="#ffffff" stroke="#e8a838" stroke-width="2"/>
+            <animateMotion dur="4.5s" repeatCount="indefinite" path="M120 90 C320 -15 680 -15 880 85" />
+          </g>
+
+          <!-- Labels -->
+          <text x="120" y="118" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" text-anchor="middle">India Gateway Ports</text>
+          <text x="120" y="129" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle">Tuticorin • Chennai • Cochin</text>
+
+          <text x="500" y="32" fill="#e8a838" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" text-anchor="middle">GULF OF MANNAR DIRECT ROUTE (24–48 HOURS)</text>
+
+          <text x="880" y="115" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" text-anchor="middle">Colombo Port, Sri Lanka</text>
+          <text x="880" y="126" fill="#4a9be4" font-family="'Inter', sans-serif" font-size="11" text-anchor="middle">South Asia Transshipment Hub &amp; Beyond</text>
+        </svg>
+      </div>
+
+      <div class="route-info-cards reveal-item reveal-delay-2">
+        <div class="route-pill-card">
+          <div class="route-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <h5>Rapid Turnaround</h5>
+            <span>24 to 48 hours transit to Colombo</span>
+          </div>
+        </div>
+
+        <div class="route-pill-card">
+          <div class="route-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div>
+            <h5>Flexible Consignments</h5>
+            <span>FCL (Full Container) &amp; LCL support</span>
+          </div>
+        </div>
+
+        <div class="route-pill-card">
+          <div class="route-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h5>Quality &amp; Compliance</h5>
+            <span>Phytosanitary &amp; pre-shipment checks</span>
+          </div>
+        </div>
+
+        <div class="route-pill-card">
+          <div class="route-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <h5>Global Horizons</h5>
+            <span>Gateway to SE Asia &amp; Middle East</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ABOUT US & DEDICATED FOUNDER SPOTLIGHT -->
+  <section class="about-section section-padding" id="about">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="about-header reveal-item">
+        <span class="section-label">Our Story &amp; Leadership</span>
+        <h2 class="section-title">About Us</h2>
+      </div>
+
+      <!-- The User's Exact Genesis Statement as an Inspiring Editorial Callout -->
+      <div class="genesis-manifesto reveal-item reveal-delay-1">
+        <span class="genesis-quote-mark">&ldquo;</span>
+        <blockquote>
+          Our journey began with a simple thought: what is less available in one place could be more valuable in another. That spark inspired us to turn everyday observations into cross-border trade opportunities, connecting the right products to the right markets.
+        </blockquote>
+      </div>
+
+      <!-- Main About Us Narrative Card (User's Exact Text with ### About Us) -->
+      <div class="about-narrative-card reveal-item reveal-delay-2">
+        <div class="narrative-badge">
+          <span class="ticker-dot"></span> Company Heritage &amp; Mission
+        </div>
+        <h3 class="about-subheading">About Us</h3>
+        <p class="about-highlight-text">
+          <strong>Founded by Gunal</strong>, our journey began with a passion for building something meaningful rather than just dreaming about it. Driven by vision and determination, we aim to transform ideas into real-world opportunities by connecting Indian suppliers with global buyers. Through our export business, we strive to simplify international trade, build trusted partnerships, and turn possibilities into progress.
+        </p>
+        <p class="about-supporting-text">
+          Operating from Tamil Nadu, India, Beyond Xport Traders bridges the gap between regional manufacturers and overseas importers, beginning with vital shipping routes to Sri Lanka and extending into global trading hubs. We cut through the confusion of cross-border logistics, providing hands-on coordination, transparent terms, and reliable delivery.
+        </p>
+        <div class="about-values-pills">
+          <span class="value-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Everyday Observation to Opportunity
+          </span>
+          <span class="value-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Action Over Theory
+          </span>
+          <span class="value-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Radical Trade Transparency
+          </span>
+          <span class="value-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Long-Term Bilateral Trust
+          </span>
+        </div>
+      </div>
+
+      <!-- DEDICATED FOUNDER CONTENT: FROM THE DESK OF GUNAL -->
+      <div class="founder-spotlight-wrap reveal-item reveal-delay-3">
+        <div class="founder-section-intro">
+          <span class="section-label" style="background: rgba(232, 168, 56, 0.15); border-color: rgba(232, 168, 56, 0.4);">Leadership &amp; Vision</span>
+          <h3 class="founder-spotlight-title">From the Founder's Desk: Gunal</h3>
+          <p class="founder-spotlight-subtitle">The driving force, values, and personal commitment behind Beyond Xport Traders.</p>
+        </div>
+
+        <div class="founder-grid-layout">
+          <!-- Left: Founder Profile Card -->
+          <div class="founder-profile-card">
+            <div class="founder-card-top">
+              <div class="founder-avatar-wrap">
+                <div class="founder-avatar-initial">G</div>
+                <span class="verified-icon" title="Verified Founder">&#10003;</span>
+              </div>
+              <div class="founder-identity">
+                <h4>Gunal</h4>
+                <span class="founder-designation">Founder &amp; Managing Director</span>
+                <span class="founder-location">Beyond Xport Traders • Tamil Nadu, India</span>
+              </div>
+            </div>
+
+            <div class="founder-bio">
+              <p>
+                Driven by an entrepreneurial mindset and a practical understanding of cross-border supply chains, Gunal established Beyond Xport Traders to turn everyday observations into accessible, reliable, and mutually rewarding trade opportunities for Indian producers and global buyers.
+              </p>
+            </div>
+
+            <div class="founder-pledge-box">
+              <div class="pledge-label">Founder's Personal Pledge</div>
+              <p>&ldquo;I believe sustainable trade is built on transparency, prompt execution, and direct accountability. Every partner who collaborates with Beyond Xport Traders receives my personal dedication to ensure verified quality, fair pricing, and seamless cargo delivery.&rdquo;</p>
+            </div>
+
+            <div class="founder-contact-actions">
+              <a href="https://wa.me/917418704319?text=Hello%20Gunal,%20I%20am%20interested%20in%20discussing%20export%20sourcing%20opportunities%20with%20Beyond%20Xport%20Traders." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                Chat with Gunal on WhatsApp
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="mailto:beyonxport@gmail.com?subject=Inquiry%20for%20Gunal%20-%20Beyond%20Xport%20Traders" class="btn btn-secondary btn-sm">
+                Email Founder's Desk
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Founder 4 Core Pillars -->
+          <div class="founder-pillars-col">
+            <div class="founder-pillar-card">
+              <div class="pillar-num">01</div>
+              <div class="pillar-content">
+                <h4>Everyday Observation to Real-World Value</h4>
+                <p>Identifying regional product abundance across India—from premium grains and spices to textiles and hardware—and connecting them to overseas markets where their value is maximized.</p>
+              </div>
+            </div>
+
+            <div class="founder-pillar-card">
+              <div class="pillar-num">02</div>
+              <div class="pillar-content">
+                <h4>Building Something Meaningful</h4>
+                <p>Moving beyond theoretical concepts to step directly into the field—auditing manufacturing facilities, validating quality standards, and ensuring full commercial alignment.</p>
+              </div>
+            </div>
+
+            <div class="founder-pillar-card">
+              <div class="pillar-num">03</div>
+              <div class="pillar-content">
+                <h4>Simplifying International Trade</h4>
+                <p>Removing the complexities of cross-border commerce through transparent commission arrangements, direct factory pricing, and rigorous export documentation coordination.</p>
+              </div>
+            </div>
+
+            <div class="founder-pillar-card">
+              <div class="pillar-num">04</div>
+              <div class="pillar-content">
+                <h4>Turning Possibilities into Progress</h4>
+                <p>Creating viable export avenues for Indian manufacturers while granting international buyers in Sri Lanka and regional hubs dependable access to quality Indian commodities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SOURCING SECTORS / PRODUCT SHOWCASE -->
+  <section class="sectors-section section-padding" id="sectors">
+    <div class="container">
+      <div class="reveal-item">
+        <span class="section-label">Verified Sourcing Sectors</span>
+        <h2 class="section-title">High-Value Indian Commodities &amp; Goods</h2>
+        <p class="section-subtitle">
+          Direct factory and farm-level sourcing across premier Indian manufacturing hubs, tailored for importers and distributors in Sri Lanka and regional markets.
+        </p>
+      </div>
+
+      <div class="sectors-grid">
+        <!-- Sector 1: Agro & Spices -->
+        <article class="sector-card reveal-item reveal-delay-1">
+          <div class="sector-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-10 10c0 4.4 2.9 8.2 7 9.5V12H7V9h2V7a4 4 0 0 1 4-4h3v3h-3a1 1 0 0 0-1 1v2h4l-.5 3H12v9.5c4.1-1.3 7-5.1 7-9.5A10 10 0 0 0 12 2z"/></svg>
+          </div>
+          <h3>Agro &amp; Spices</h3>
+          <p>Direct sourcing of premium agricultural harvest, tested for export moisture, purity standards, and grade sorting.</p>
+          <div class="sector-tags">
+            <span class="sector-tag-chip">Basmati &amp; Non-Basmati Rice</span>
+            <span class="sector-tag-chip">Dry Red Chillies</span>
+            <span class="sector-tag-chip">Turmeric &amp; Cumin</span>
+            <span class="sector-tag-chip">Coir &amp; Coconut Produce</span>
+          </div>
+          <button class="sector-card-action" onclick="prefillInquiry('Agro & Spices')">
+            Inquire About Agro Sourcing &rarr;
+          </button>
+        </article>
+
+        <!-- Sector 2: Textiles & Apparel -->
+        <article class="sector-card reveal-item reveal-delay-2">
+          <div class="sector-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </div>
+          <h3>Textiles &amp; Fabrics</h3>
+          <p>Connecting overseas fashion brands and fabric distributors directly with Tamil Nadu and Gujarat textile clusters.</p>
+          <div class="sector-tags">
+            <span class="sector-tag-chip">Cotton Yarns</span>
+            <span class="sector-tag-chip">Knitted Garments</span>
+            <span class="sector-tag-chip">Home Furnishings &amp; Towels</span>
+            <span class="sector-tag-chip">Uniform Materials</span>
+          </div>
+          <button class="sector-card-action" onclick="prefillInquiry('Textiles & Fabrics')">
+            Inquire About Textiles &rarr;
+          </button>
+        </article>
+
+        <!-- Sector 3: Engineering & Hardware -->
+        <article class="sector-card reveal-item reveal-delay-3">
+          <div class="sector-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Engineering &amp; Hardware</h3>
+          <p>Precision fasteners, pumps, hand tools, and electrical components manufactured to international ISO standards.</p>
+          <div class="sector-tags">
+            <span class="sector-tag-chip">Industrial Fasteners</span>
+            <span class="sector-tag-chip">Electrical Cables &amp; Switches</span>
+            <span class="sector-tag-chip">Pumps &amp; Motors</span>
+            <span class="sector-tag-chip">Hand Tools</span>
+          </div>
+          <button class="sector-card-action" onclick="prefillInquiry('Engineering & Hardware')">
+            Inquire About Engineering &rarr;
+          </button>
+        </article>
+
+        <!-- Sector 4: Ceramics & Construction -->
+        <article class="sector-card reveal-item reveal-delay-4">
+          <div class="sector-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+          </div>
+          <h3>Ceramics &amp; Building Materials</h3>
+          <p>Sourcing directly from India's world-renowned ceramic belts: premium floor tiles, sanitaryware, and polished granites.</p>
+          <div class="sector-tags">
+            <span class="sector-tag-chip">Vitrified Floor Tiles</span>
+            <span class="sector-tag-chip">Sanitaryware &amp; Fittings</span>
+            <span class="sector-tag-chip">Granite Slabs</span>
+            <span class="sector-tag-chip">Architectural Hardware</span>
+          </div>
+          <button class="sector-card-action" onclick="prefillInquiry('Ceramics & Building Materials')">
+            Inquire About Ceramics &rarr;
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. OUR SERVICES -->
+  <section class="services-section section-padding" id="services">
+    <div class="container">
+      <div class="reveal-item">
+        <span class="section-label">End-to-End Intermediary Solutions</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+          From the initial product specification discovery to customs clearance and final shipment handover, we ensure complete alignment between buyers and sellers.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-box reveal-item reveal-delay-1">
+          <span class="service-num">SERVICE 01</span>
+          <h3>Supplier Verification &amp; Sourcing</h3>
+          <p>We identify and screen verified Indian manufacturers based on precise technical specifications, quality certifications, production capacity, and competitive pricing expectations.</p>
+        </div>
+
+        <div class="service-box reveal-item reveal-delay-2">
+          <span class="service-num">SERVICE 02</span>
+          <h3>Buyer &amp; Distributor Matching</h3>
+          <p>We connect overseas importers, wholesale distributors, and commercial buyers with trustworthy Indian suppliers who can fulfill long-term recurring purchase orders.</p>
+        </div>
+
+        <div class="service-box reveal-item reveal-delay-3">
+          <span class="service-num">SERVICE 03</span>
+          <h3>Export Logistics Coordination</h3>
+          <p>We coordinate between exporters, clearing agents (CHA), freight forwarders, and shipping lines to organize container booking, bill of lading documentation, and port procedures.</p>
+        </div>
+
+        <div class="service-box reveal-item reveal-delay-4">
+          <span class="service-num">SERVICE 04</span>
+          <h3>Commercial Deal Structuring</h3>
+          <p>We assist in clarifying Incoterms (FOB / CIF / CFR), quotation negotiations, payment terms alignment (LC / TT), and compliance paperwork to eliminate miscommunication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROCESS / HOW WE WORK -->
+  <section class="process-section section-padding" id="process">
+    <div class="container">
+      <div class="reveal-item">
+        <span class="section-label" style="background: rgba(232, 168, 56, 0.15); border-color: rgba(232, 168, 56, 0.4);">Systematic Execution</span>
+        <h2 class="section-title light">How We Work</h2>
+        <p class="section-subtitle light">
+          A transparent, step-by-step workflow designed to protect both the supplier's capital and the buyer's quality expectations.
+        </p>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="step-card reveal-item reveal-delay-1">
+          <div class="step-badge">1</div>
+          <h3>Understand Requirement</h3>
+          <p>We analyze the buyer's exact product specifications, grade, packaging style, required volume (LCL/FCL), and target landed cost.</p>
+        </div>
+
+        <div class="step-card reveal-item reveal-delay-2">
+          <div class="step-badge">2</div>
+          <h3>Match &amp; Validate</h3>
+          <p>We identify compliant Indian suppliers, arrange sample inspections where required, and establish communication with verifiable credentials.</p>
+        </div>
+
+        <div class="step-card reveal-item reveal-delay-3">
+          <div class="step-badge">3</div>
+          <h3>Align Commercial Terms</h3>
+          <p>We assist in finalizing formal proforma invoices, Incoterms (FOB, CIF, EXW), production lead times, and transparent payment structures.</p>
+        </div>
+
+        <div class="step-card reveal-item reveal-delay-4">
+          <div class="step-badge">4</div>
+          <h3>Facilitate Dispatch</h3>
+          <p>We track container stuffing, export documentation readiness, port dispatch, and provide real-time updates until safe port delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. BUSINESS MODEL & WHY CHOOSE US -->
+  <section class="model-section section-padding" id="model">
+    <div class="container">
+      <div class="model-comparison-grid">
+        <!-- Business Model Card -->
+        <div class="model-card-box reveal-item">
+          <span class="section-label">Operational Blueprint</span>
+          <h3>Our Business Model</h3>
+          <p style="color: var(--slate-600); line-height: 1.7;">
+            We operate strictly as a specialized sourcing and trade intermediary partner. We do not inflate prices with speculative inventory holding costs.
+          </p>
+          <ul class="tick-list">
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Zero Speculative Inventory:</strong> Eliminates storage overheads, guaranteeing fresh, direct factory-floor pricing for buyers.</div>
+            </li>
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Direct Supplier-to-Buyer Coordination:</strong> Clear lines of communication without multi-layered distributor markups.</div>
+            </li>
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Transparent Agreed Brokerage:</strong> Clearly defined commission structures agreed upon before transactions commence.</div>
+            </li>
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Established Freight Alliances:</strong> Coordination with licensed customs house agents (CHA) and sea cargo operators.</div>
+            </li>
+          </ul>
+
+          <div class="model-notice">
+            <strong>Clear Terms:</strong> Our service scope and intermediary terms are documented with both parties prior to order placement, maintaining full statutory compliance with Indian Foreign Trade Policy.
+          </div>
+        </div>
+
+        <!-- Why Choose Us Card -->
+        <div class="model-card-box reveal-item reveal-delay-2">
+          <span class="section-label">The Beyond Xport Advantage</span>
+          <h3>Why Partner With Us?</h3>
+          <p style="color: var(--slate-600); line-height: 1.7;">
+            Traditional trading houses often obscure supplier identities to add hefty 20–40% margins. We operate with integrity and personal founder accountability.
+          </p>
+          <ul class="tick-list">
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Direct Founder Access:</strong> Work directly with Gunal and senior trade coordinators, not junior sales reps.</div>
+            </li>
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Regional Cultural &amp; Trade Fluency:</strong> Deep understanding of South Indian manufacturing hubs and Sri Lankan import protocols.</div>
+            </li>
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Cost-Conscious Agility:</strong> Fast quotations, honest capacity assessments, and zero hidden surcharge surprises.</div>
+            </li>
+            <li>
+              <div class="tick-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div><strong>Relationship-Driven:</strong> We focus on repeat seasonal contracts and mutual prosperity rather than one-off opportunistic deals.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FAQ ACCORDION -->
+  <section class="faq-section section-padding" id="faq">
+    <div class="container">
+      <div class="reveal-item" style="text-align: center; max-width: 680px; margin: 0 auto 48px;">
+        <span class="section-label">Clarifying Cross-Border Trade</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Everything you need to know about working with Beyond Xport Traders as an importer or Indian supplier.</p>
+      </div>
+
+      <div class="faq-wrapper reveal-item reveal-delay-1">
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>What Incoterms do you typically coordinate under?</span>
+            <span class="faq-chevron">&darr;</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              We primarily assist with <strong>FOB (Free On Board)</strong> from Indian ports such as Tuticorin, Chennai, or Cochin, and <strong>CIF (Cost, Insurance &amp; Freight)</strong> or <strong>CFR</strong> delivered directly to Colombo Port (Sri Lanka) or other nominated destination discharge ports.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>How do you verify supplier quality before shipment?</span>
+            <span class="faq-chevron">&darr;</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              We conduct on-site factory verification, review statutory GST/IEC licenses, inspect raw material sources, coordinate pre-shipment sample dispatches, and can coordinate third-party independent inspections (e.g. SGS / Bureau Veritas) per buyer requirements.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>Can small or medium buyers order Less than Container Load (LCL)?</span>
+            <span class="faq-chevron">&darr;</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Yes. While Full Container Loads (20ft / 40ft FCL) yield the lowest per-unit ocean freight cost, we actively coordinate LCL consolidations and trial sample shipments for buyers testing initial market demand.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>What are the standard payment terms for cross-border orders?</span>
+            <span class="faq-chevron">&darr;</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Transactions are typically structured via <strong>Irrevocable Letter of Credit (LC at Sight)</strong> or milestone-based <strong>Telegraphic Transfer (TT: advance deposit against proforma invoice + balance against original Bill of Lading copy)</strong>, protecting both the supplier and the importer.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false">
+            <span>I am an Indian manufacturer. How can I join your export roster?</span>
+            <span class="faq-chevron">&darr;</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Simply fill out the inquiry form below or send a message directly to Gunal via WhatsApp with your product catalogue, manufacturing capacity, and current export certifications. We will review your portfolio and discuss active buyer requests.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CONTACT & INTERACTIVE INQUIRY SUITE -->
+  <section class="contact-section section-padding" id="contact">
+    <div class="container">
+      <div class="reveal-item" style="margin-bottom: 48px;">
+        <span class="section-label" style="background: rgba(232, 168, 56, 0.15); border-color: rgba(232, 168, 56, 0.4);">Direct Dialogue</span>
+        <h2 class="section-title light">Let's Build Global Trade Together.</h2>
+        <p class="section-subtitle light">
+          Whether you are an Indian manufacturer seeking foreign market expansion or an overseas buyer sourcing quality commodities, connect with us today.
+        </p>
+      </div>
+
+      <div class="contact-layout-grid">
+        <!-- Interactive Form -->
+        <div class="inquiry-form-card reveal-item reveal-delay-1">
+          <h3>Request Sourcing or Trade Partnership</h3>
+          <p class="form-desc">Fill out your requirements below for prompt direct response from our trade desk.</p>
+
+          <form id="tradeInquiryForm">
+            <div class="form-grid-row">
+              <div class="form-group">
+                <label class="form-label" for="inqName">Your Full Name *</label>
+                <input type="text" id="inqName" name="name" class="form-control" placeholder="e.g. Gunal" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inqEmail">Business Email *</label>
+                <input type="email" id="inqEmail" name="email" class="form-control" placeholder="name@company.com" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-grid-row">
+              <div class="form-group">
+                <label class="form-label" for="inqRole">I am a *</label>
+                <select id="inqRole" name="role" class="form-control">
+                  <option value="International Buyer / Importer">International Buyer / Importer (Sri Lanka &amp; Global)</option>
+                  <option value="Indian Manufacturer / Supplier">Indian Manufacturer / Supplier seeking export markets</option>
+                  <option value="Wholesaler / Distributor">Wholesaler / Distributor</option>
+                  <option value="Logistics / Trade Partner">Logistics / Trade Partner</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inqSector">Product Category *</label>
+                <select id="inqSector" name="sector" class="form-control">
+                  <option value="Agro & Spices">Agro &amp; Spices (Rice, Chillies, Coir, Spices)</option>
+                  <option value="Textiles & Fabrics">Textiles &amp; Fabrics (Yarns, Garments, Towels)</option>
+                  <option value="Engineering & Hardware">Engineering &amp; Hardware (Fasteners, Tools)</option>
+                  <option value="Ceramics & Building Materials">Ceramics &amp; Building Materials (Tiles, Granite)</option>
+                  <option value="Custom Sourcing Requirement">Custom Sourcing Requirement (Other)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid-row">
+              <div class="form-group">
+                <label class="form-label" for="inqVolume">Estimated Volume / Packaging</label>
+                <select id="inqVolume" name="volume" class="form-control">
+                  <option value="Trial / Sample Quantity">Trial / Sample Consignment</option>
+                  <option value="LCL (Less than Container Load)">LCL (Less than Container Load)</option>
+                  <option value="1 x 20ft FCL Container">1 x 20ft FCL Container</option>
+                  <option value="Multiple Containers / Recurring Order">Multiple Containers / Recurring Monthly</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inqDestination">Destination Port / Region</label>
+                <input type="text" id="inqDestination" name="destination" class="form-control" placeholder="e.g. Colombo Port, Sri Lanka">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="inqMsg">Product Specification &amp; Special Requirements *</label>
+              <textarea id="inqMsg" name="message" class="form-control" rows="3" placeholder="Provide details regarding grade, target pricing, packaging preference, or timeline..." required></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                Submit Trade RFQ
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <button type="button" class="btn btn-secondary" id="whatsAppDirectBtn">
+                Send via WhatsApp
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Cards & Location -->
+        <div class="contact-details-box reveal-item reveal-delay-2">
+          <div class="contact-info-card">
+            <h4>
+              <img src="images/logo-globe.png" alt="" style="width:28px;height:28px;border-radius:50%;display:inline-block;">
+              Trade Desk &amp; Leadership
+            </h4>
+            <ul class="info-rows">
+              <li class="info-row-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div class="info-content">
+                  <small>Founder &amp; Managing Director</small>
+                  <span>Gunal</span>
+                </div>
+              </li>
+
+              <li class="info-row-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="info-content">
+                  <small>Official Trade Inquiries</small>
+                  <a href="mailto:beyonxport@gmail.com">beyonxport@gmail.com</a>
+                </div>
+              </li>
+
+              <li class="info-row-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="info-content">
+                  <small>Phone / WhatsApp Direct Line</small>
+                  <a href="tel:+917418704319">+91 74187 04319</a>
+                  &nbsp;&bull;&nbsp;
+                  <a href="https://wa.me/917418704319" target="_blank" rel="noopener noreferrer" style="color: #6ee7b7; font-size: 0.85rem;">(WhatsApp Available)</a>
+                </div>
+              </li>
+
+              <li class="info-row-item">
+                <div class="info-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="info-content">
+                  <small>Strategic Origin Base</small>
+                  <span>Tamil Nadu, India (Direct corridor to Colombo Port)</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="credentials-badge-card">
+            <h5>Verified Trade Standards</h5>
+            <div class="credentials-list">
+              <span class="credential-tag">&#10003; Directorate General of Foreign Trade Aligned</span>
+              <span class="credential-tag">&#10003; GST &amp; IEC Compliant Operations</span>
+              <span class="credential-tag">&#10003; Phyto &amp; Quality Test Coordination</span>
+              <span class="credential-tag">&#10003; Bilateral Trade Chamber Standards</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 12. FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top-grid">
+      <div>
+        <a href="#home" class="brand-wrapper" style="margin-bottom: 14px;">
+          <img src="images/logo-globe.png" alt="" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-title" style="color: #ffffff;">BEYOND XPORT</span>
+            <span class="brand-subtitle">TRADERS</span>
+          </div>
+        </a>
+        <p class="footer-brand-p">
+          Founded by Gunal, Beyond Xport Traders connects trusted Indian suppliers with global buyers, transforming everyday observations into reliable cross-border trade opportunities.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us &amp; Founder</a></li>
+          <li><a href="#sectors">Sourcing Sectors</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#model">Business Model</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Key Corridors</h5>
+        <ul class="footer-links">
+          <li><a href="#sectors">India ⇄ Sri Lanka Sea Route</a></li>
+          <li><a href="#sectors">Tuticorin &amp; Chennai ➔ Colombo</a></li>
+          <li><a href="#sectors">Basmati &amp; Agro Produce</a></li>
+          <li><a href="#sectors">Textiles &amp; Garments</a></li>
+          <li><a href="#contact">Direct RFQ Desk</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Connecting India to the World &middot; &copy; <span id="currentYear"></span> Beyond Xport Traders. All rights reserved.</span>
+      <span>Designed with Care &amp; Integrity &middot; Non-Speculative Sourcing</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 13. FLOATING SPEED DIAL (WhatsApp + Scroll To Top) -->
+<div class="floating-actions">
+  <a href="https://wa.me/917418704319?text=Hello%20Gunal,%20I%20would%20like%20to%20inquire%20about%20export%20sourcing%20through%20Beyond%20Xport%20Traders." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-float" aria-label="Chat on WhatsApp with Beyond Xport Traders">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24M8.53 7.33c-.16 0-.35.06-.53.27-.18.21-.7.68-.7 1.66s.72 1.93.82 2.06c.1.14 1.39 2.19 3.42 3.03.48.2.86.33 1.15.42.49.15.93.13 1.28.08.39-.06 1.21-.5 1.38-.98.17-.48.17-.89.12-.98-.05-.09-.19-.15-.4-.26-.21-.1-1.21-.6-1.4-.66-.19-.07-.33-.1-.47.1-.14.21-.54.68-.66.82-.12.14-.24.16-.45.05-.21-.1-.89-.33-1.69-1.05-.63-.56-1.05-1.26-1.17-1.47-.12-.21-.01-.33.09-.43.09-.09.21-.24.31-.36.1-.12.14-.21.21-.35.07-.14.03-.26-.02-.36-.05-.1-.47-1.13-.64-1.55-.17-.41-.34-.35-.47-.36h-.4z"/></svg>
+    <span>Chat with Gunal</span>
+  </a>
+
+  <button class="btn-scroll-top" id="scrollTopBtn" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</div>
+
+<!-- 14. INTERACTIVE TOAST NOTICE -->
+<div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8a838" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+  <span id="toastMsg">Inquiry recorded successfully.</span>
+</div>
+
+<!-- 15. SCRIPTS & MICRO-INTERACTIONS -->
+<script>
+// Dynamic Current Year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// Header scroll elevation & Back to Top visibility
+var siteHeader = document.getElementById('siteHeader');
+var scrollTopBtn = document.getElementById('scrollTopBtn');
+
+function handleScrollState() {
+  var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollY > 50) {
+    siteHeader.classList.add('scrolled');
+  } else {
+    siteHeader.classList.remove('scrolled');
+  }
+
+  if (scrollY > 450) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+}
+
+window.addEventListener('scroll', handleScrollState, { passive: true });
+handleScrollState();
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Mobile Navigation Drawer & Backdrop Logic
+var mobileToggle = document.getElementById('mobileToggle');
+var mobileCloseBtn = document.getElementById('mobileCloseBtn');
+var mobileDrawer = document.getElementById('mobileDrawer');
+var menuBackdrop = document.getElementById('menuBackdrop');
+var drawerNavList = document.getElementById('drawerNavList');
+
+function setMobileDrawer(open) {
+  var isOpen = open !== undefined ? open : !mobileDrawer.classList.contains('open');
+  mobileDrawer.classList.toggle('open', isOpen);
+  menuBackdrop.classList.toggle('open', isOpen);
+  mobileToggle.classList.toggle('active', isOpen);
+  mobileToggle.setAttribute('aria-expanded', isOpen);
+  mobileDrawer.setAttribute('aria-hidden', !isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+if (mobileToggle) {
+  mobileToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    setMobileDrawer();
+  });
+}
+
+if (mobileCloseBtn) {
+  mobileCloseBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    setMobileDrawer(false);
+  });
+}
+
+if (menuBackdrop) {
+  menuBackdrop.addEventListener('click', function() {
+    setMobileDrawer(false);
+  });
+}
+
+if (drawerNavList) {
+  drawerNavList.addEventListener('click', function(e) {
+    if (e.target.closest('a')) {
+      setMobileDrawer(false);
+    }
+  });
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    setMobileDrawer(false);
+  }
+});
+
+// Scroll Reveal with Intersection Observer
+var revealItems = document.querySelectorAll('.reveal-item');
+if ('IntersectionObserver' in window) {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealItems.forEach(function(item) {
+    observer.observe(item);
+  });
+} else {
+  revealItems.forEach(function(item) {
+    item.classList.add('revealed');
+  });
+}
+
+// Active Nav Link Spy (Desktop & Mobile Drawer)
+var sections = document.querySelectorAll('main > section');
+var navItems = document.querySelectorAll('.nav-link');
+var drawerItems = document.querySelectorAll('.drawer-nav-link');
+
+if ('IntersectionObserver' in window) {
+  var navObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.getAttribute('id');
+        navItems.forEach(function(link) {
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+        drawerItems.forEach(function(link) {
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+
+  sections.forEach(function(sec) {
+    navObserver.observe(sec);
+  });
+}
+
+// FAQ Accordion
+var faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(function(item) {
+  var trigger = item.querySelector('.faq-trigger');
+  var content = item.querySelector('.faq-content');
+  
+  trigger.addEventListener('click', function() {
+    var isOpen = item.classList.contains('active');
+    
+    // Close other items
+    faqItems.forEach(function(other) {
+      if (other !== item) {
+        other.classList.remove('active');
+        other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-content').style.maxHeight = null;
+      }
+    });
+
+    if (isOpen) {
+      item.classList.remove('active');
+      trigger.setAttribute('aria-expanded', 'false');
+      content.style.maxHeight = null;
+    } else {
+      item.classList.add('active');
+      trigger.setAttribute('aria-expanded', 'true');
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  });
+});
+
+// Toast notification helper
+var toast = document.getElementById('toastNotice');
+var toastMsg = document.getElementById('toastMsg');
+var toastTimer;
+
+function showToast(message) {
+  toastMsg.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function() {
+    toast.classList.remove('show');
+  }, 4500);
+}
+
+// Category shortcut to form
+function prefillInquiry(sectorName) {
+  var sectorSelect = document.getElementById('inqSector');
+  if (sectorSelect) {
+    for (var i = 0; i < sectorSelect.options.length; i++) {
+      if (sectorSelect.options[i].value.indexOf(sectorName) !== -1 || sectorName.indexOf(sectorSelect.options[i].value) !== -1) {
+        sectorSelect.selectedIndex = i;
+        break;
+      }
+    }
+  }
+  var contactSec = document.getElementById('contact');
+  if (contactSec) {
+    contactSec.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('inqMsg').focus();
+    showToast('Category selected: ' + sectorName + '. Please add your specifications.');
+  }
+}
+
+// WhatsApp Direct Inquiry Button
+document.getElementById('whatsAppDirectBtn').addEventListener('click', function() {
+  var form = document.getElementById('tradeInquiryForm');
+  var name = form.name.value.trim() || 'Prospective Partner';
+  var role = form.role.value;
+  var sector = form.sector.value;
+  var volume = form.volume.value;
+  var dest = form.destination.value.trim() || 'Colombo Port, Sri Lanka';
+  var msg = form.message.value.trim() || 'I would like to discuss sourcing requirements.';
+
+  var waText = 'Hello Gunal, I would like to initiate a trade inquiry with Beyond Xport Traders:%0A%0A' +
+    '*Name:* ' + encodeURIComponent(name) + '%0A' +
+    '*Role:* ' + encodeURIComponent(role) + '%0A' +
+    '*Product Category:* ' + encodeURIComponent(sector) + '%0A' +
+    '*Estimated Volume:* ' + encodeURIComponent(volume) + '%0A' +
+    '*Target Destination:* ' + encodeURIComponent(dest) + '%0A' +
+    '*Requirements:* ' + encodeURIComponent(msg);
+
+  window.open('https://wa.me/917418704319?text=' + waText, '_blank');
+  showToast('Opening WhatsApp to connect directly with Gunal...');
+});
+
+// Formal RFQ Submission
+document.getElementById('tradeInquiryForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var name = form.name.value.trim();
+  var email = form.email.value.trim();
+  var role = form.role.value;
+  var sector = form.sector.value;
+  var volume = form.volume.value;
+  var dest = form.destination.value.trim();
+  var msg = form.message.value.trim();
+
+  var body = 'Trade Inquiry - Beyond Xport Traders\n\n' +
+    'Full Name: ' + name + '\n' +
+    'Email Address: ' + email + '\n' +
+    'Role: ' + role + '\n' +
+    'Category: ' + sector + '\n' +
+    'Volume: ' + volume + '\n' +
+    'Destination Port: ' + (dest || 'Not specified') + '\n\n' +
+    'Specification Details:\n' + msg;
+
+  var mailtoUrl = 'mailto:beyonxport@gmail.com?subject=' + 
+    encodeURIComponent('Trade RFQ: ' + sector + ' - ' + name) + 
+    '&body=' + encodeURIComponent(body);
+
+  window.location.href = mailtoUrl;
+  showToast('Opening your email client to send the trade RFQ to beyonxport@gmail.com.');
+});
+</script>
+</body>
+</html>
